@@ -2,7 +2,7 @@ const ok = function(){
 				document.getElementById('dialogbox').style.display = 'none';
 				document.getElementById('dialogoverlay').style.display = 'none';
 			}
-
+console.log(ok)
 //*********************************
 //FUNCTION THAT CONTAINS EVERYTHING FROM THE API SO YOU CAN LOOK FOR IT ON THE PAGE
 //*********************************
