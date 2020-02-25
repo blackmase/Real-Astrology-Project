@@ -1,0 +1,88 @@
+body{
+	background: linear-gradient(to top, rgba(255, 0, 191, 1), rgba(26, 209, 255, .7));
+	/*background-image: radial-gradient(red, yellow, green);*/
+}
+img	{
+    /*background-image: linear-gradient(to top, transparent, rgba(220, 26, 204,1));*/
+	border: 8px solid #8000ff;
+    border-bottom: 100px solid #9933ff;
+    border-style: groove;
+      background-image: linear-gradient(to top,transparent 30%);
+
+}
+dd{
+	/*red is for webbrowsers that dont support gradient*/
+  color: red;
+  background-image: -webkit-gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  background-image: gradient( linear, left top, right top, color-stop(0, #f22), color-stop(0.15, #f2f), color-stop(0.3, #22f), color-stop(0.45, #2ff), color-stop(0.6, #2f2),color-stop(0.75, #2f2), color-stop(0.9, #ff2), color-stop(1, #f22) );
+  color:transparent;
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+dt{
+	font-size: 40px;
+	color: red;
+}
+
+
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+}
+
+.flex-container{
+	background-image: linear-gradient(to top, transparent, rgba(220, 26, 204,1));
+	border-radius: 15px;
+	display: flex;
+	flex-direction: column;
+	/*padding: 25px;*/
+	align-content: space-around;
+	flex-wrap: wrap;
+}
+
+
+.submission{
+	position: absolute;
+  top: 8px;
+  left: 100px;
+
+}
+
+#description{
+	display: flex;
+	flex-direction: column;
+}
+
+#dialogoverlay{
+	display: none;
+	opacity: .8;
+	position: fixed;
+	top: 0px;
+	left: 0px;
+	background: #fff;
+	width: 100%;
+	z-index: 10;
+}
+
+#dialogbox{
+	display: none;
+	position: fixed;
+	background: #000;
+	border-radius: 7px;
+	width: 550px;
+	z-index: 10;
+}
+
+#dialogbox > div{ background:#fff; margin:8px; }
+#dialogbox > div > #dialogboxhead{ background: #8000ff; font-size:19px; padding:10px; color:#ccc; }
+#dialogbox > div > #dialogboxbody{ background: #9900ff; padding:20px; color:#fff; }
+#dialogbox > div > #dialogboxfoot{ background: #8000ff; padding:10px; text-align:right; }
