@@ -8,7 +8,7 @@ img	{
     border-bottom: 100px solid #9933ff;
     border-style: groove;
       background-image: linear-gradient(to top,transparent 30%);
-
+    filter: brightness(75%);
 }
 dd{
 	/*red is for webbrowsers that dont support gradient*/
@@ -18,6 +18,8 @@ dd{
   color:transparent;
   -webkit-background-clip: text;
   background-clip: text;
+  font-weight: 900;
+
 }
 dt{
 	font-size: 40px;
