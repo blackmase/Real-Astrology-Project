@@ -1,7 +1,11 @@
-const ok = function(){
-				document.getElementById('dialogbox').style.display = 'none';
-				document.getElementById('dialogoverlay').style.display = 'none';
-			}
+			//**********************************
+			//THIS Function gets rid of the white overlay
+			//**********************************
+// const ok = function(){
+// 				document.getElementById('#modal-textbox').style.display = 'none';
+// 				document.getElementById('#modal').style.display = 'none';
+// 			}
+const userInput = $('input[type="text"]').val();
 //*********************************
 //FUNCTION THAT CONTAINS EVERYTHING FROM THE API SO YOU CAN LOOK FOR IT ON THE PAGE
 //*********************************
@@ -37,68 +41,52 @@ $.ajax({
 		//*******************************
 		//Created a custom Alert Box with a white overlay so you must click ok
 		//*******************************
-		function CustomAlert(){
-			this.render = function(dialog){
-				var winW = window.innerWidth;
-				var winH = window.innerHeight;
-				var dialogoverlay = document.getElementById('dialogoverlay');
-				var dialogbox = document.getElementById('dialogbox');
-				dialogoverlay.style.display = "block";
-				dialogoverlay.style.height = winH+"px";
-				dialogbox.style.left = (winW/2) - (550 * .5)+"px";
-				dialogbox.style.top = "100px";
-				dialogbox.style.display = "block";
-				document.getElementById('dialogboxhead').innerHTML = "Acknowledge This Message";
-				document.getElementById('dialogboxbody').innerHTML = dialog;
-				document.getElementById('dialogboxfoot').innerHTML = '<button  onclick="ok()">OK</button>';
-			}
-			//**********************************
-			//THIS Function gets rid of the white overlay
-			//**********************************
-			// this.ok = function(){
-			// 	document.getElementById('dialogbox').style.display = 'none';
-			// 	document.getElementById('dialogoverlay').style.display = 'none';
-			// }
-		}
-				// console.log(Alert.ok())
-			let Alert = new CustomAlert();
-			// let Alert = this.ok()
-			console.log(Alert)
-		// let Alert = new CustomAlert();
 		//you can use.html or .text
 		$('#color').html(data.color);
 		$('#today').html(data.current_date);
 		$('#description').html(data.description);
 		$('#daterange').html(data.date_range);
 if (`${userInput}` == 'aries') {
-	Alert.render('Hey there Aries! we are meditating on your info, click ok to transcend...')
+const modalpost = $('<dd>').text('Hey there Aries! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalpost)
 }else if (`${userInput}` == 'taurus') {
-	Alert.render('Hey there Taurus! we are meditating on your info, click ok to transcend...')
+const modalTaurus = $('<dd>').text('Hey there Taurus! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalTaurus)
 }else if (`${userInput}` == 'gemini') {
-	Alert.render('Hey there Gemini! we are meditating on your info, click ok to transcend...')
+	const modalGemini = $('<dd>').text('Hey there Gemini! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalGemini)
 }else if (`${userInput}` == 'cancer') {
-	Alert.render('Hey there Cancer! we are meditating on your info, click ok to transcend...')
+	const modalCancer = $('<dd>').text('Hey there Cancer! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalCancer)
 }else if (`${userInput}` == 'leo') {
-	Alert.render('Hey there Leo! we are meditating on your info, click ok to transcend...')
+	const modalLeo = $('<dd>').text('Hey there Leo! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalLeo)
 }else if (`${userInput}` == 'virgo') {
-	Alert.render('Hey there Virgo! we are meditating on your info, click ok to transcend...')
+	const modalVirgo = $('<dd>').text('Hey there Virgo! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalVirgo)
 }else if (`${userInput}` == 'libra') {
-	Alert.render('Hey there Libra! we are meditating on your info, click ok to transcend...')
+	const modalLibra = $('<dd>').text('Hey there Libra! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalLibra)
 }else if (`${userInput}` == 'scorpio') {
-	Alert.render('Hey there Scorpio! we are meditating on your info, click ok to transcend...')
+	const modalScorpio = $('<dd>').text('Hey there Scorpio! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalScorpio)
 }else if (`${userInput}` == 'sagittarius') {
-	Alert.render('Hey there Sagittarius! we are meditating on your info, click ok to transcend...')
+	const modalSagittarius = $('<dd>').text('Hey there Sagittarius! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalSagittarius)
 }else if (`${userInput}` == 'capricorn') {
-	Alert.render('Hey there Capricorn! we are meditating on your info, click ok to transcend...')
+	const modalCapricorn = $('<dd>').text('Hey there Capricorn! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalCapricorn)
 }else if (`${userInput}` == 'aquarius') {
-	Alert.render('Hey there Aquarius! we are meditating on your info, click ok to transcend...')
+	const modalAquarius = $('<dd>').text('Hey there Aquarius! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalAquarius)
 }else if (`${userInput}` == 'pisces') {
-	Alert.render('Hey there Pisces! we are meditating on your info, click ok to transcend...')
+	const modalPisces = $('<dd>').text('Hey there Pisces! we are meditating on your info, click ok to transcend...')
+	$('#modal').append(modalPisces)
 };
 		(item) => { 
 const newDiv = $('<dd>').text(item.description)
 $('#description').append(newDiv)
-       
+
 };
 	},
 	//*****************************
@@ -115,6 +103,33 @@ $('#description').append(newDiv)
 
 
 })
+		 	  $(  () => {
+
+
+				const $openBtn = $('#openModal');
+
+				const $modal = $('#modal');
+
+				const $closeBtn = $('#close');
+
+				const openModal = () => {
+					$modal.css('display', 'block');
+
+				}
+
+				const closeModal = () => {
+					$modal.css('display', 'none');
+				}
+
+				$('form').on('submit', openModal);
+
+				
+				$closeBtn.on('click', closeModal);
+			
+				// const modalpost = $('<dd>').text('Hey there Aries! we are meditating on your info, click ok to transcend...')
+       			// $('#modal').append(modalpost)
+			
+		});
 
 
 

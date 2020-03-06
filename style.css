@@ -64,27 +64,42 @@ dt{
 	flex-direction: column;
 }
 
-#dialogoverlay{
-	display: none;
-	opacity: .8;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-	background: #fff;
+#modal-textbox {
+	background-color: white;
+	height: 350px;
+	width: 350px;
+	border-radius: 2px;
+	margin: 150px auto;
+	/*background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.lifewire.com%2Fthmb%2Fe1mImIgGFTY3nnhP1V0d7QYfQXs%3D%2F2121x1414%2Ffilters%3Afill(auto%2C1)%2FGettyImages-580726625-5a3b28fcb39d03003780db10.jpg&f=1&nofb=1")*/
+	box-shadow: 0 2px 2px rgba(0,0,0,0.2);
+	padding: 2%;
+	/*line-height: */
+	
+}
+
+#modal{
+	background-color: rgba(255,255,255,0.4);
+	position: absolute;
+	top: 150px;
+	left: 0;
+	height: 100%;
 	width: 100%;
 	z-index: 10;
-}
-
-#dialogbox{
+	/*This puts our modal in front of the body (which has a default z-index setting of `0`
+	overflow: auto;
+	/*If overflow is clipped, a scroll-bar should be added to see the rest of the content*/
 	display: none;
-	position: fixed;
+	position: relative;
 	background: #000;
 	border-radius: 7px;
-	width: 550px;
+	height: 1000px;
+	width: 100%;
 	z-index: 10;
+	text-align: center;
+	
 }
 
-#dialogbox > div{ background:#fff; margin:8px; }
-#dialogbox > div > #dialogboxhead{ background: #8000ff; font-size:19px; padding:10px; color:#ccc; }
-#dialogbox > div > #dialogboxbody{ background: #9900ff; padding:20px; color:#fff; }
-#dialogbox > div > #dialogboxfoot{ background: #8000ff; padding:10px; text-align:right; }
+#close{
+	left: 100px;
+	position: center;
+}
